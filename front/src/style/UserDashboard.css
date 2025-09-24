@@ -1,0 +1,191 @@
+Container
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f9fafb, #f1f5f9);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #111827;
+}
+
+.username {
+  color: #2563eb; /* blue */
+}
+
+/* Profile Card */
+.profile-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Orders Title */
+.orders-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* Orders Table */
+.orders-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.orders-table th, .orders-table td {
+  padding: 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.orders-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+/* Status Badge */
+.status-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.delivered { background: #16a34a; }  /* Green */
+.status-badge.shipped { background: #2563eb; }    /* Blue */
+.status-badge.pending { background: #f59e0b; }   /* Yellow */
+
+/* Button */
+.btn-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.logout-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #333;
+}
+
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.logout-btn, .back-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn {
+  background-color: #e63946;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #c71c2f;
+}
+
+.back-btn {
+  background-color: #457b9d;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #1d3557;
+}
+
+ 
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatar-container img {
+  width: 100px;   /* adjust size */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+} 
+.tushar{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+/* UserDashboard.css */
+
+/* Ensure images scale */
+.order-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* On small screens stack everything */
+@media (max-width: 576px) {
+  .order-img img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .card h5, .card h6 {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%; /* buttons full width on mobile */
+  }
+
+  .card {
+    padding: 10px;
+  }
+}

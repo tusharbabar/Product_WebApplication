@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin-login-container {
+  width: 400px;
+  height: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  background: linear-gradient(to right, #6dd5fa, #d3d7da);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.admin-login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.admin-login-container button:hover {
+  background: #0056b3;
+}
+
+
+/* Modal common */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+  width: 350px;
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Success modal */
+.modal-content.success {
+  border-top: 5px solid #28a745;
+}
+.modal-content.success p {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Error modal */
+.modal-content.error {
+  border-top: 5px solid #dc3545;
+}
+.modal-content.error p {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Buttons inside modal */
+.modal-content button {
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
