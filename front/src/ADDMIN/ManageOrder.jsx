@@ -314,6 +314,7 @@ function ManageOrders() {
             <th>Price</th>
             <th>Address</th>
             <th>Status</th>
+            <th>Contact</th>
             <th>Payment</th>
             <th>Actions</th>
           </tr>
@@ -328,6 +329,7 @@ function ManageOrders() {
               <td>{order.product_price}</td>
               <td>{order.address}</td>
               <td>{order.status}</td>
+              <td>{order.Contact}</td>
               <td>{order.payment_method}</td>
               <td>
                 <button

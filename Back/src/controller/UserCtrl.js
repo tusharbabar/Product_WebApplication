@@ -7,7 +7,7 @@ require('dotenv').config();
 const jwt = require("jsonwebtoken");
 const { signToken } = require('../Utils/jwthelper.js');
 const { sendOrderEmail} = require("../Utils/email");
-
+const { sendInvoiceEmail } = require("../Utils/sendInvoiceMail.js"); 
 const SECRET_KEY = process.env.JWT_SECRET;   
 const EXPIRES_IN = process.env.JWT_EXPIRES; 
 
@@ -199,11 +199,51 @@ exports.updateUser = async (req, res) => {
 //   });
 // };
 
+// Add New part of Invoice Bill
+
+// exports.placeOrder = (req, res) => {
+//   const { user_id, product_id, address,contact, payment_method } = req.body;
+//   if (!user_id || !product_id || !address || !contact || !payment_method) {
+//     return res.status(400).json({ error: "All fields are required" });
+//   }
+//   UserModel.createOrder(req.body, async (err, result) => {
+//     if (err) {
+//       console.error("DB Error:", err);
+//       return res.status(500).json({ error: err.message });
+//     }
+
+//     try {
+//       // Email send with product details, price, and address
+//       await sendOrderEmail(
+//         result.Email,
+//         result.Name,
+//         result.product_name,
+//         result.price,      
+//         result.address     
+//       );
+
+//       res.status(201).json({
+//         message: "Order placed successfully & email sent",
+//         orderId: result.insertId,
+//       });
+//     } catch (emailErr) {
+//       console.error("Email Error:", emailErr);
+//       res.status(201).json({
+//         message: "Order placed successfully but email failed",
+//         orderId: result.insertId,
+//       });
+//     }
+//   });
+// };
+
+
 exports.placeOrder = (req, res) => {
-  const { user_id, product_id, address,contact, payment_method } = req.body;
+  const { user_id, product_id, address, contact, payment_method } = req.body;
+
   if (!user_id || !product_id || !address || !contact || !payment_method) {
     return res.status(400).json({ error: "All fields are required" });
   }
+
   UserModel.createOrder(req.body, async (err, result) => {
     if (err) {
       console.error("DB Error:", err);
@@ -211,30 +251,35 @@ exports.placeOrder = (req, res) => {
     }
 
     try {
-      // Email send with product details, price, and address
+      // ✅ 1. Send Order Confirmation Email
       await sendOrderEmail(
         result.Email,
         result.Name,
         result.product_name,
-        result.price,      
-        result.address     
+        result.price,
+        result.address
       );
 
+      // ✅ 2. Send Invoice PDF
+      await sendInvoiceEmail({
+        ...result,
+        payment_method
+      });
+
       res.status(201).json({
-        message: "Order placed successfully & email sent",
+        message: "Order placed, confirmation mail & invoice sent ✅",
         orderId: result.insertId,
       });
     } catch (emailErr) {
       console.error("Email Error:", emailErr);
+
       res.status(201).json({
-        message: "Order placed successfully but email failed",
+        message: "Order placed but email failed to send ❌",
         orderId: result.insertId,
       });
     }
   });
 };
-
-
 
 
 // Get user orders

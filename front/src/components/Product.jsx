@@ -248,9 +248,9 @@ class Product extends Component {
               <h3>Customer Service</h3>
               <ul>
                 <li><Link to="/">FAQ</Link></li>
-                <li><Link to="/">Shipping Policy</Link></li>
-                <li><Link to="/">Return Policy</Link></li>
-                <li><Link to="/">Privacy Policy</Link></li>
+                <li><Link to="/terms">Shipping Policy</Link></li>
+                <li><Link to="/terms">Return Policy</Link></li>
+                <li><Link to="/terms">Privacy Policy</Link></li>
               </ul>
             </div>
             <div className="footer-section">

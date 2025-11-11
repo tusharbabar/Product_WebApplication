@@ -21,20 +21,6 @@ exports.AddUser = (Name, Email, password, Date, role) => {
 
 //login admin
 
-// exports.loginadmin = (Email, password) => {
-//   return new Promise((resolve, reject) => {
-//     db.query(
-//       "SELECT id, Email, password, role FROM users WHERE Email = ? AND password = ? AND role = 'admin'",
-//       [Email, password],
-//       (err, results) => {
-//         if (err) reject(err);
-//         else resolve(results);
-//       }
-//     );
-//   });
-// };
-
-// models/userModel.js
 
 exports.loginadmin = (Email) => {
   return new Promise((resolve, reject) => {
@@ -119,41 +105,7 @@ exports.updateUser = (id, userData) => {
 // ========== Order Manage======
 
 
-// exports.createOrder = (orderData, callback) => {
-//   const { user_id, product_id, address, payment_method } = orderData;
 
-//   const sql = `
-//     INSERT INTO orders (user_id, product_id, address,contact, payment_method, status)
-//     VALUES (?, ?, ?, ?, 'Pending')
-//   `;
-
-//   db.query(sql, [user_id, product_id, address, payment_method], (err, result) => {
-//     if (err) return callback(err);
-
-//     const orderId = result.insertId;
-
-//     // 👇 fetch all order details with JOIN
-//     const fetchSql = `
-//       SELECT 
-//         u.Email, 
-//         u.Name, 
-//         p.Name AS product_name, 
-//         p.price, 
-//         o.address ,
-//         o.contact,
-//       FROM orders o
-//       JOIN users u ON o.user_id = u.id
-//       JOIN products p ON o.product_id = p.id
-//       WHERE o.id = ?
-//     `;
-
-//     db.query(fetchSql, [orderId], (fetchErr, rows) => {
-//       if (fetchErr) return callback(fetchErr);
-
-//       callback(null, { insertId: orderId, ...rows[0] });
-//     });
-//   });
-// };
 
 exports.createOrder = (orderData, callback) => {
   const { user_id, product_id, address, contact, payment_method } = orderData;
@@ -231,6 +183,7 @@ exports.getAllOrders = () => {
           o.address,
           o.payment_method,
           o.status,
+          o.Contact,
           o.created_at
       FROM orders o
       JOIN users u ON o.user_id = u.id
