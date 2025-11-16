@@ -255,7 +255,7 @@ class Product extends Component {
             </div>
             <div className="footer-section">
               <h3>Contact Us</h3>
-              <p>Email: productinfo560@gmail.com</p>
+              <p>Email: quickcartpvt123@gmail.com</p>
               <p>Phone: +91 9529647719</p>
               <div className="social-icons">
                 <Link to="https://github.com/tusharbabar">
