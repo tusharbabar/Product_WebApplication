@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/custom.css";
 
-function Offer() {
+function OffersPage() {
   const offers = [
     {
       id: 1,
       title: "Wireless Earbuds 40% Off",
       price: "₹1,499",
       oldPrice: "₹2,499",
-      image: "https://m.media-amazon.com/images/I/61kWB+uzR2L._SL1500_.jpg",
+      image:
+        "https://m.media-amazon.com/images/I/61kWB+uzR2L._SL1500_.jpg",
       link: "/electronic",
     },
     {
@@ -36,9 +37,10 @@ function Offer() {
       price: "₹9,999",
       oldPrice: "₹14,999",
       image:
-        "https://i.pinimg.com/736x/d6/80/86/d6808602b2b87a6e75dad19c5a064c4d.jpg",
+        "https://i.pinimg.com/736x/d6/80/86/d6808602b2b87a6e75dad19c5a064c4d.jpg    ",
       link: "/electronic",
     },
+    
     {
       id: 7,
       title: "Kitchen Mixer Grinder",
@@ -57,115 +59,24 @@ function Offer() {
         "https://i.pinimg.com/736x/6b/9e/33/6b9e3373272e56d1db330eb9d84f7983.jpg",
       link: "/beauty",
     },
-
-    // 🔥 New Items Added
-    {
-      id: 9,
-      title: "Smart Fitness Band",
-      price: "₹1,299",
-      oldPrice: "₹2,499",
-      image:
-        "https://i.pinimg.com/736x/83/8d/ab/838dab9a4cf0cc68c0c1b03d1fb5db5c.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 10,
-      title: "Casual Running Shoes",
-      price: "₹899",
-      oldPrice: "₹1,999",
-      image:
-        "https://i.pinimg.com/736x/2b/22/21/2b22219ca64d0844c535a14d3cd3d37a.jpg",
-      link: "/men",
-    },
-    {
-      id: 11,
-      title: "Women’s Handbag Combo",
-      price: "₹1,199",
-      oldPrice: "₹2,499",
-      image:
-        "https://i.pinimg.com/736x/19/25/77/192577dc4c7f945fbbd4b2e9c343f5e9.jpg",
-      link: "/women",
-    },
-    {
-      id: 12,
-      title: "Portable Bluetooth Speaker",
-      price: "₹749",
-      oldPrice: "₹1,599",
-      image:
-        "https://i.pinimg.com/736x/60/ed/4a/60ed4ac540a38bf73e3b2e4f4a26c0f4.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 13,
-      title: "Luxury Fragrance Set",
-      price: "₹1,099",
-      oldPrice: "₹2,299",
-      image:
-        "https://i.pinimg.com/736x/fd/dc/4d/fddc4dad1d9e03b919e5b3ba4fa427ff.jpg",
-      link: "/beauty",
-    },
-    {
-      id: 14,
-      title: "Non-Stick Cookware 3-Piece Set",
-      price: "₹1,799",
-      oldPrice: "₹3,699",
-      image:
-        "https://i.pinimg.com/736x/bc/b6/3b/bcb63b0e3b5c5e1e20b9afabb8d3c59e.jpg",
-      link: "/home",
-    },
-    {
-      id: 15,
-      title: "Premium Bed Sheet (King Size)",
-      price: "₹999",
-      oldPrice: "₹1,899",
-      image:
-        "https://i.pinimg.com/736x/e4/2a/94/e42a94aa4fcd4a2e835b0c7f8c182df4.jpg",
-      link: "/home",
-    },
-    {
-      id: 16,
-      title: "Trendy Women’s Sneakers",
-      price: "₹899",
-      oldPrice: "₹1,799",
-      image:
-        "https://i.pinimg.com/736x/a7/ba/2a/a7ba2a16f311e860d4022434e4cf5b19.jpg",
-      link: "/women",
-    },
-    {
-      id: 17,
-      title: "Gaming Keyboard RGB",
-      price: "₹1,499",
-      oldPrice: "₹2,999",
-      image:
-        "https://i.pinimg.com/736x/48/52/4a/48524ab5cb42ebc7036c6c76ab29d29e.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 18,
-      title: "Coffee Maker Machine",
-      price: "₹2,299",
-      oldPrice: "₹4,499",
-      image:
-        "https://i.pinimg.com/736x/54/98/2f/54982fa335c0bb689fa2635d11ad1cec.jpg",
-      link: "/home",
-    },
   ];
-
+  
   return (
-    <div className="container my-5">
-      <h1 className="text-center fw-bold mb-3">🔥 Exclusive Offers</h1>
+    <div className="container my-5 ">
+      <h1 className="text-center mb-4"> Exclusive Offers </h1>
       <p className="text-center text-muted">
         Limited-time deals just for you. Hurry before they're gone!
       </p>
 
-      <div className="row mt-4">
+      <div className="row mt-4 ">
         {offers.map((offer) => (
-          <div className="col-md-3 col-sm-6 mb-4" key={offer.id}>
-            <div className="card offer-card shadow-sm">
+          <div className="col-md-3 mb-4" key={offer.id}>
+            <div className="card h-100 shadow-sm animate__animated animate__zoomIn">
               <img
                 src={offer.image}
-                className="card-img-top offer-img"
+                className="card-img-top"
                 alt={offer.title}
+                style={{ height: 220, objectFit: "cover" }}
               />
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{offer.title}</h5>
@@ -175,9 +86,8 @@ function Offer() {
                     {offer.oldPrice}
                   </span>
                 </p>
-
                 <Link to={offer.link} className="btn btn-warning mt-auto">
-                  Grab Offer
+                  Grab Offer 
                 </Link>
               </div>
             </div>
@@ -194,4 +104,4 @@ function Offer() {
   );
 }
 
-export default Offer;
+export default OffersPage;
