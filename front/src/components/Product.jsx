@@ -17,7 +17,7 @@ class Product extends Component {
         title: "Wireless Earbuds",
         price: "₹1,499",
         image:
-          "https://i.pinimg.com/736x/0f/e9/2d/0fe92da5cd71f99d06f5c5831a39832f.jpg",
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         link: "/electronic  ",
       },
       {
