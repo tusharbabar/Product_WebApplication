@@ -222,42 +222,45 @@ function OffersPage() {
         "https://i.pinimg.com/736x/bc/b6/3b/bcb63b0e3b5c5e1e20b9afabb8d3c59e.jpg",
       link: "/home",
     },
-    {
-      id: 15,
-      title: "Premium Bed Sheet (King Size)",
-      price: "₹999",
-      oldPrice: "₹1,899",
-      image:
-        "https://i.pinimg.com/736x/e4/2a/94/e42a94aa4fcd4a2e835b0c7f8c182df4.jpg",
-      link: "/home",
-    },
-    {
-      id: 16,
-      title: "Trendy Women’s Sneakers",
-      price: "₹899",
-      oldPrice: "₹1,799",
-      image:
-        "https://i.pinimg.com/736x/a7/ba/2a/a7ba2a16f311e860d4022434e4cf5b19.jpg",
-      link: "/women",
-    },
-    {
-      id: 17,
-      title: "Gaming Keyboard RGB",
-      price: "₹1,499",
-      oldPrice: "₹2,999",
-      image:
-        "https://i.pinimg.com/736x/48/52/4a/48524ab5cb42ebc7036c6c76ab29d29e.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 18,
-      title: "Coffee Maker Machine",
-      price: "₹2,299",
-      oldPrice: "₹4,499",
-      image:
-        "https://i.pinimg.com/736x/54/98/2f/54982fa335c0bb689fa2635d11ad1cec.jpg",
-      link: "/home",
-    },
+   const offers = [
+  {
+    id: 15,
+    title: "Premium Bed Sheet (King Size)",
+    price: "₹999",
+    oldPrice: "₹1,899",
+    image:
+      "https://m.media-amazon.com/images/I/81o9xgUekcL._AC_SL1500_.jpg",
+    link: "/home",
+  },
+  {
+    id: 16,
+    title: "Trendy Women’s Sneakers",
+    price: "₹899",
+    oldPrice: "₹1,799",
+    image:
+      "https://m.media-amazon.com/images/I/61rUuLwHxPL._AC_UL1500_.jpg",
+    link: "/women",
+  },
+  {
+    id: 17,
+    title: "Gaming Keyboard RGB",
+    price: "₹1,499",
+    oldPrice: "₹2,999",
+    image:
+      "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 18,
+    title: "Coffee Maker Machine",
+    price: "₹2,299",
+    oldPrice: "₹4,499",
+    image:
+      "https://m.media-amazon.com/images/I/71UDhgkI9SL._AC_SL1500_.jpg",
+    link: "/home",
+  },
+];
+
   ];
 
   return (
