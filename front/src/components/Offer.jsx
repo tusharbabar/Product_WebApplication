@@ -112,117 +112,114 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function OffersPage() {
-  const offers = [
-    {
-      id: 1,
-      title: "Wireless Earbuds 40% Off",
-      price: "₹1,499",
-      oldPrice: "₹2,499",
-      image: "https://m.media-amazon.com/images/I/61kWB+uzR2L._SL1500_.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 2,
-      title: "Men's Denim Jacket",
-      price: "₹1,199",
-      oldPrice: "₹2,499",
-      image:
-        "https://i.pinimg.com/1200x/cf/ea/c7/cfeac7f1fc5247f1f3a80d0b2f23022b.jpg",
-      link: "/men",
-    },
-    {
-      id: 3,
-      title: "Women's Designer Saree",
-      price: "₹1,799",
-      oldPrice: "₹3,599",
-      image:
-        "https://i.pinimg.com/1200x/8b/69/1a/8b691aeb62447e3f95cfc5343db225f1.jpg",
-      link: "/women",
-    },
-    {
-      id: 4,
-      title: "Smart LED TV 32 inch",
-      price: "₹9,999",
-      oldPrice: "₹14,999",
-      image:
-        "https://i.pinimg.com/736x/d6/80/86/d6808602b2b87a6e75dad19c5a064c4d.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 7,
-      title: "Kitchen Mixer Grinder",
-      price: "₹2,499",
-      oldPrice: "₹3,999",
-      image:
-        "https://i.pinimg.com/736x/e5/cc/0e/e5cc0eea30e0c144defe65de4beeff78.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 8,
-      title: "Beauty Makeup Kit",
-      price: "₹999",
-      oldPrice: "₹1,999",
-      image:
-        "https://i.pinimg.com/736x/6b/9e/33/6b9e3373272e56d1db330eb9d84f7983.jpg",
-      link: "/beauty",
-    },
-
-    // NEW ITEMS
-    {
-      id: 9,
-      title: "Smart Fitness Band",
-      price: "₹1,299",
-      oldPrice: "₹2,499",
-      image:
-        "https://i.pinimg.com/736x/83/8d/ab/838dab9a4cf0cc68c0c1b03d1fb5db5c.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 10,
-      title: "Casual Running Shoes",
-      price: "₹899",
-      oldPrice: "₹1,999",
-      image:
-        "https://i.pinimg.com/736x/2b/22/21/2b22219ca64d0844c535a14d3cd3d37a.jpg",
-      link: "/men",
-    },
-    {
-      id: 11,
-      title: "Women’s Handbag Combo",
-      price: "₹1,199",
-      oldPrice: "₹2,499",
-      image:
-        "https://i.pinimg.com/736x/19/25/77/192577dc4c7f945fbbd4b2e9c343f5e9.jpg",
-      link: "/women",
-    },
-    {
-      id: 12,
-      title: "Portable Bluetooth Speaker",
-      price: "₹749",
-      oldPrice: "₹1,599",
-      image:
-        "https://i.pinimg.com/736x/60/ed/4a/60ed4ac540a38bf73e3b2e4f4a26c0f4.jpg",
-      link: "/electronic",
-    },
-    {
-      id: 13,
-      title: "Luxury Fragrance Set",
-      price: "₹1,099",
-      oldPrice: "₹2,299",
-      image:
-        "https://i.pinimg.com/736x/fd/dc/4d/fddc4dad1d9e03b919e5b3ba4fa427ff.jpg",
-      link: "/beauty",
-    },
-    {
-      id: 14,
-      title: "Non-Stick Cookware 3-Piece Set",
-      price: "₹1,799",
-      oldPrice: "₹3,699",
-      image:
-        "https://i.pinimg.com/736x/bc/b6/3b/bcb63b0e3b5c5e1e20b9afabb8d3c59e.jpg",
-      link: "/home",
-    },
-   const offers = [
+ const offers = [
+  {
+    id: 1,
+    title: "Wireless Earbuds 40% Off",
+    price: "₹1,499",
+    oldPrice: "₹2,499",
+    image: "https://m.media-amazon.com/images/I/61kWB+uzR2L._SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 2,
+    title: "Men's Denim Jacket",
+    price: "₹1,199",
+    oldPrice: "₹2,499",
+    image:
+      "https://m.media-amazon.com/images/I/71ve1GPmR2L._AC_UL1500_.jpg",
+    link: "/men",
+  },
+  {
+    id: 3,
+    title: "Women's Designer Saree",
+    price: "₹1,799",
+    oldPrice: "₹3,599",
+    image:
+      "https://m.media-amazon.com/images/I/71sDdyCjYaL._AC_UL1500_.jpg",
+    link: "/women",
+  },
+  {
+    id: 4,
+    title: "Smart LED TV 32 inch",
+    price: "₹9,999",
+    oldPrice: "₹14,999",
+    image:
+      "https://m.media-amazon.com/images/I/71tIrZqybrL._AC_SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 7,
+    title: "Kitchen Mixer Grinder",
+    price: "₹2,499",
+    oldPrice: "₹3,999",
+    image:
+      "https://m.media-amazon.com/images/I/71pFe1PfvBL._AC_SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 8,
+    title: "Beauty Makeup Kit",
+    price: "₹999",
+    oldPrice: "₹1,999",
+    image:
+      "https://m.media-amazon.com/images/I/71jvXG3SIlL._AC_SL1500_.jpg",
+    link: "/beauty",
+  },
+  {
+    id: 9,
+    title: "Smart Fitness Band",
+    price: "₹1,299",
+    oldPrice: "₹2,499",
+    image:
+      "https://m.media-amazon.com/images/I/61QJ7hPZrPL._SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 10,
+    title: "Casual Running Shoes",
+    price: "₹899",
+    oldPrice: "₹1,999",
+    image:
+      "https://m.media-amazon.com/images/I/71T0A-LN0wL._AC_UL1500_.jpg",
+    link: "/men",
+  },
+  {
+    id: 11,
+    title: "Women’s Handbag Combo",
+    price: "₹1,199",
+    oldPrice: "₹2,499",
+    image:
+      "https://m.media-amazon.com/images/I/718GtPoJ3IL._AC_UL1500_.jpg",
+    link: "/women",
+  },
+  {
+    id: 12,
+    title: "Portable Bluetooth Speaker",
+    price: "₹749",
+    oldPrice: "₹1,599",
+    image:
+      "https://m.media-amazon.com/images/I/71qr0+p9TEL._AC_SL1500_.jpg",
+    link: "/electronic",
+  },
+  {
+    id: 13,
+    title: "Luxury Fragrance Set",
+    price: "₹1,099",
+    oldPrice: "₹2,299",
+    image:
+      "https://m.media-amazon.com/images/I/71u7NbQkvvL._AC_SL1500_.jpg",
+    link: "/beauty",
+  },
+  {
+    id: 14,
+    title: "Non-Stick Cookware 3-Piece Set",
+    price: "₹1,799",
+    oldPrice: "₹3,699",
+    image:
+      "https://m.media-amazon.com/images/I/71WEE-YYLLL._AC_SL1500_.jpg",
+    link: "/home",
+  },
   {
     id: 15,
     title: "Premium Bed Sheet (King Size)",
@@ -261,7 +258,6 @@ function OffersPage() {
   },
 ];
 
-  ];
 
   return (
     <>
