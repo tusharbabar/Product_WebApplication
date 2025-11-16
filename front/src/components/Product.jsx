@@ -41,7 +41,7 @@ class Product extends Component {
         title: "Smart Watch",
         price: "₹1,999",
         image:
-          "https://i.pinimg.com/736x/3b/7a/25/3b7a25b829711e5e20a697f55eb76f48.jpg",
+          "https://i.pinimg.com/736x/50/28/99/502899a1e3614a537ffa9960fc83c40b.jpg",
         link: "/electronic",
       },
       {
