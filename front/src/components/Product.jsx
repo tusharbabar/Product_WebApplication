@@ -265,7 +265,7 @@ class Product extends Component {
                   <i className="fab fa-linkedin"></i>
                 </Link>
                 <Link to="#"><i className="fab fa-twitter"></i></Link>
-                <Link to="#"><i className="fab fa-instagram"></i></Link>
+                <Link to="https://www.instagram.com/tushar___9192/"><i className="fab fa-instagram"></i></Link>
               </div>
             </div>
           </div>
